@@ -1,0 +1,164 @@
+.e-shadow-box {
+    perspective: 1000px
+}
+
+.e-shadow-box--zoom:hover {
+    transform: scale(1.2)
+}
+
+.e-shadow-box__inner {
+    position: relative;
+    transform-style: preserve-3d;
+    transition: transform .8s
+}
+
+.e-shadow-box--flipped .e-shadow-box__inner {
+    transform: rotateY(180deg)
+}
+
+.e-shadow-box__content {
+    align-items: flex-start;
+    backface-visibility: hidden;
+    background: #fff;
+    border-radius: 1rem;
+    box-shadow: 0 4px 32px rgba(1,64,190,.078);
+    color: #111;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    justify-items: flex-start;
+    overflow: hidden;
+    padding: 2.5rem;
+    position: relative;
+    width: 100%
+}
+
+.e-shadow-box__content--thin {
+    padding: 1.5rem 2.5rem
+}
+
+.e-shadow-box__content--front {
+    z-index: 1
+}
+
+.e-shadow-box__content--back {
+    height: auto;
+    min-height: 100%;
+    pointer-events: none;
+    position: absolute;
+    top: 0;
+    transform: rotateY(180deg);
+    z-index: 2
+}
+
+.e-shadow-box__content--center {
+    align-items: center;
+    justify-items: flex-start;
+    text-align: center
+}
+
+.e-shadow-box--flipped .e-shadow-box__content--front {
+    pointer-events: none
+}
+
+.e-shadow-box--flipped .e-shadow-box__content--back {
+    pointer-events: visible
+}
+
+.e-shadow-box__image {
+    align-items: center;
+    display: flex;
+    height: 5.5rem;
+    justify-content: center;
+    margin: 0 0 1.5rem
+}
+
+.e-shadow-box__image-el {
+    height: auto;
+    max-height: 5.5rem;
+    max-width: 10.375rem;
+    width: auto
+}
+
+.e-shadow-box__image--fluid {
+    height: auto;
+    margin: 0;
+    min-height: 13rem;
+    padding-bottom: 1.5rem;
+    width: 100%
+}
+
+.e-shadow-box__image--fluid .e-shadow-box__image-el {
+    height: auto;
+    max-height: none;
+    max-width: 100%;
+    -o-object-fit: contain;
+    object-fit: contain;
+    -o-object-position: center;
+    object-position: center;
+    width: auto
+}
+
+.e-shadow-box__title {
+    color: #222;
+    font-size: 1.25rem;
+    font-weight: 700;
+    line-height: 1.44;
+    margin-bottom: 1rem
+}
+
+.e-shadow-box__description {
+    font-size: 1rem;
+    line-height: 1.5
+}
+
+.e-shadow-box__content--thin .e-shadow-box__description {
+    max-width: 80%
+}
+
+.e-shadow-box__link {
+    font-size: 1rem;
+    font-weight: 700;
+    margin-top: 1.5rem;
+    text-decoration: none
+}
+
+.e-shadow-box__link:hover {
+    text-decoration: underline
+}
+
+.e-shadow-box__toggle {
+    background: #e6ebf8;
+    border: 0;
+    border-radius: 50%;
+    cursor: pointer;
+    display: block;
+    height: 7.75rem;
+    position: absolute;
+    right: 0;
+    top: 0;
+    transform: translate(50%,-50%);
+    transition: all .2s linear;
+    width: 7.75rem
+}
+
+.e-shadow-box__toggle:hover {
+    transform: translate(50%,-50%) scale(1.2)
+}
+
+.e-shadow-box__toggle:before {
+    background: url(//8443659.fs1.hubspotusercontent-na1.net/hubfs/8443659/raw_assets/public/isobar-eservice-theme/images/icons/flip-arrow.svg) no-repeat 50%/contain;
+    bottom: 1.5rem;
+    content: "";
+    display: block;
+    height: 26px;
+    left: 1.5rem;
+    position: absolute;
+    transform: rotate(180deg);
+    transform-origin: center;
+    width: 23px
+}
+
+.e-shadow-box__content--back .e-shadow-box__toggle:before {
+    transform: rotate(0)
+}

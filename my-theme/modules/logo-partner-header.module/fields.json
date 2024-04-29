@@ -1,0 +1,37 @@
+[ {
+  "id" : "92faaa4b-a6dc-1d0c-b5bb-0777dda3ea66",
+  "name" : "image_field",
+  "display_width" : null,
+  "label" : "Image",
+  "required" : false,
+  "locked" : false,
+  "responsive" : true,
+  "resizable" : true,
+  "show_loading" : false,
+  "type" : "image",
+  "default" : {
+    "size_type" : "auto",
+    "src" : "",
+    "alt" : null,
+    "loading" : "disabled"
+  }
+}, {
+  "id" : "dd3819b3-32f6-a401-6768-901f419be401",
+  "name" : "text_field",
+  "display_width" : null,
+  "label" : "Text",
+  "required" : false,
+  "locked" : false,
+  "validation_regex" : "",
+  "visibility" : {
+    "controlling_field" : null,
+    "controlling_field_path" : "image_field",
+    "controlling_value_regex" : null,
+    "property" : null,
+    "operator" : "NOT_EMPTY",
+    "access" : null
+  },
+  "allow_new_line" : false,
+  "show_emoji_picker" : false,
+  "type" : "text"
+} ]

@@ -1,0 +1,18 @@
+<!--
+  templateType: global_partial
+  label: Header lp
+-->
+
+<header class="header">
+    <a href="#main-content" class="header__skip">Skip to content</a>
+    <div class="header__container content-wrapper">
+        <div class="header__logo is-desktop">
+            {% module "99950752456" path= '../../modules/logo-partner-header.module' %}
+        </div>
+        <div class="header__tools is-desktop">
+            <div class="header_tool">
+                {% global_partial path='./header-partials/font-switcher.html' %}
+            </div>
+        </div>
+    </div>
+</header>

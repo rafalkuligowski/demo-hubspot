@@ -1,0 +1,292 @@
+[
+    {
+        "default": {
+            "size_type": "auto",
+            "src": "https://f.hubspotusercontent00.net/hubfs/8443659/GettyImages-669887538.jpg",
+            "alt": "GettyImages-669887538",
+            "loading": "lazy",
+            "width": 1920,
+            "height": 1280,
+            "max_width": 1920,
+            "max_height": 1280
+        },
+        "display_width": null,
+        "id": "9235c227-420f-87af-3778-59feb1abd6cf",
+        "label": "Image",
+        "locked": false,
+        "name": "image_field",
+        "required": false,
+        "resizable": true,
+        "responsive": true,
+        "show_loading": false,
+        "type": "image"
+    },
+    {
+        "choices": [
+            [
+                "cover",
+                "cover"
+            ],
+            [
+                "contain",
+                "contain"
+            ]
+        ],
+        "default": "cover",
+        "display": "select",
+        "display_width": null,
+        "id": "hero_image_desktop_size",
+        "label": "Fill type for desktop",
+        "locked": false,
+        "multiple": false,
+        "name": "hero_image_desktop_size",
+        "preset": null,
+        "reordering_enabled": true,
+        "required": false,
+        "type": "choice"
+    },
+    {
+        "allow_new_line": false,
+        "default": "350px",
+        "display_width": null,
+        "id": "hero_image_desktop_height",
+        "label": "Image height",
+        "locked": false,
+        "name": "hero_image_desktop_height",
+        "required": false,
+        "show_emoji_picker": false,
+        "type": "text",
+        "validation_regex": ""
+    },
+    {
+        "allow_new_line": false,
+        "default": "350px",
+        "display_width": null,
+        "id": "hero_image_desktop_max_height",
+        "label": "Image max height",
+        "locked": false,
+        "name": "hero_image_desktop_max_height",
+        "required": false,
+        "show_emoji_picker": false,
+        "type": "text",
+        "validation_regex": ""
+    },
+    {
+        "default": false,
+        "display": "checkbox",
+        "display_width": null,
+        "id": "has_hidden_after",
+        "label": "Does it has hidden after cover",
+        "locked": false,
+        "name": "has_hidden_after",
+        "required": false,
+        "type": "boolean"
+    },
+    {
+        "default": false,
+        "display": "checkbox",
+        "display_width": null,
+        "id": "has_mobile_image",
+        "label": "Does mobile have different image?",
+        "locked": false,
+        "name": "has_mobile_image",
+        "required": false,
+        "type": "boolean"
+    },
+    {
+        "default": {
+            "size_type": "auto",
+            "src": "https://f.hubspotusercontent00.net/hubfs/8443659/GettyImages-669887538.jpg",
+            "alt": "GettyImages-669887538",
+            "loading": "lazy",
+            "width": 1920,
+            "height": 1280,
+            "max_width": 1920,
+            "max_height": 1280
+        },
+        "display_width": null,
+        "id": "mobile_image_field",
+        "label": "Mobile image",
+        "locked": false,
+        "name": "mobile_image_field",
+        "required": false,
+        "resizable": true,
+        "responsive": true,
+        "show_loading": false,
+        "type": "image",
+        "visibility": {
+            "controlling_field": "has_mobile_image",
+            "controlling_value_regex": "true",
+            "operator": "EQUAL"
+        }
+    },
+    {
+        "choices": [
+            [
+                "cover",
+                "cover"
+            ],
+            [
+                "contain",
+                "contain"
+            ]
+        ],
+        "default": "cover",
+        "display": "select",
+        "display_width": null,
+        "id": "hero_image_mobile_size",
+        "label": "Fill type for mobile",
+        "locked": false,
+        "multiple": false,
+        "name": "hero_image_mobile_size",
+        "preset": null,
+        "reordering_enabled": true,
+        "required": false,
+        "type": "choice",
+        "visibility": {
+            "controlling_field": "has_mobile_image",
+            "controlling_value_regex": "true",
+            "operator": "EQUAL"
+        }
+    },
+    {
+        "allow_new_line": false,
+        "default": "350px",
+        "display_width": null,
+        "id": "hero_image_mobile_height",
+        "label": "Height for mobile image",
+        "locked": false,
+        "name": "hero_image_mobile_height",
+        "required": false,
+        "show_emoji_picker": false,
+        "type": "text",
+        "validation_regex": "",
+        "visibility": {
+            "controlling_field": "has_mobile_image",
+            "controlling_value_regex": "true",
+            "operator": "EQUAL"
+        }
+    },
+    {
+        "default": 0,
+        "display": "slider",
+        "display_width": null,
+        "id": "c2bb45ce-7f0f-ac4c-f987-5ac1a7367896",
+        "inline_help_text": "Wprowadź pionową pozycję zdjęcia w headerze \n(0 - zdjęcie wycentrowane; \nwartości na plus - pokazana górna część zdjęcia;\nwartości na minus - pokazana dolna część zdjęcia)",
+        "label": "Number",
+        "locked": false,
+        "max": 1000,
+        "min": -1000,
+        "name": "number_field",
+        "required": false,
+        "step": 1,
+        "type": "number"
+    },
+    {
+        "default": {
+            "url": {
+                "content_id": null,
+                "href": "",
+                "type": "CONTENT"
+            },
+            "open_in_new_tab": false,
+            "no_follow": false
+        },
+        "display_width": null,
+        "id": "96e27caa-4fb1-8993-feae-d271a5a7016d",
+        "label": "Button - blue",
+        "locked": false,
+        "name": "button_blue",
+        "required": false,
+        "show_advanced_rel_options": false,
+        "supported_types": [
+            "EXTERNAL",
+            "CONTENT",
+            "FILE",
+            "EMAIL_ADDRESS",
+            "BLOG"
+        ],
+        "type": "link"
+    },
+    {
+        "allow_new_line": false,
+        "default": "Zapytaj o ofertę dla swojego biznesu",
+        "display_width": null,
+        "id": "a1a16d65-1bd1-e835-3ea9-f8fa93bb8c1b",
+        "label": "Button blue text",
+        "locked": false,
+        "name": "button_blue_text",
+        "required": false,
+        "show_emoji_picker": false,
+        "type": "text",
+        "validation_regex": ""
+    },
+    {
+        "default": {
+            "url": {
+                "content_id": null,
+                "href": "",
+                "type": "EXTERNAL"
+            },
+            "open_in_new_tab": false,
+            "no_follow": false
+        },
+        "display_width": null,
+        "id": "31f27715-5f35-0405-6621-0e86f165a327",
+        "label": "Button - white",
+        "locked": false,
+        "name": "button_white",
+        "required": false,
+        "show_advanced_rel_options": false,
+        "supported_types": [
+            "EXTERNAL",
+            "CONTENT",
+            "FILE",
+            "EMAIL_ADDRESS",
+            "BLOG"
+        ],
+        "type": "link"
+    },
+    {
+        "allow_new_line": false,
+        "default": "Dowiedz się więcej",
+        "display_width": null,
+        "id": "d68179f4-cfaa-7709-8404-baefc89d4427",
+        "label": "Button white text",
+        "locked": false,
+        "name": "button_white_text",
+        "required": false,
+        "show_emoji_picker": false,
+        "type": "text",
+        "validation_regex": ""
+    },
+    {
+        "default": false,
+        "display": "checkbox",
+        "display_width": null,
+        "id": "8807620f-300f-e9fa-8898-bfa42f2b6c7a",
+        "inline_help_text": "Zaznacz jeżeli w hero ma się wyświetlać tytuł strony.",
+        "label": "Show title",
+        "locked": false,
+        "name": "show_title",
+        "required": false,
+        "type": "boolean"
+    },
+    {
+        "allow_new_line": false,
+        "default": "{{ page_meta.html_title }}",
+        "display_width": null,
+        "id": "e1109bce-9f60-ed45-7d55-6e17027f5959",
+        "label": "Title",
+        "locked": false,
+        "name": "title",
+        "required": false,
+        "show_emoji_picker": false,
+        "type": "text",
+        "validation_regex": "",
+        "visibility": {
+            "controlling_field": "8807620f-300f-e9fa-8898-bfa42f2b6c7a",
+            "operator": "NOT_EMPTY"
+        }
+    }
+]

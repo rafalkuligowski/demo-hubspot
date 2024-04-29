@@ -1,0 +1,11 @@
+[
+    {
+        "display_width": null,
+        "id": "7d346e38-cf85-6375-a1e5-095d9725654f",
+        "label": "Services table",
+        "locked": false,
+        "name": "services_table",
+        "required": false,
+        "type": "hubdbtable"
+    }
+]

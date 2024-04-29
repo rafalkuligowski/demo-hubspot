@@ -1,0 +1,22 @@
+{
+  "label" : "isobar-eservice-theme-child",
+  "preview_path" : "./templates/home.html",
+  "screenshot_path" : "./images/template-previews/home.png",
+  "enable_domain_stylesheets" : true,
+  "is_available_for_new_content" : true,
+  "extends" : "isobar-eservice-theme",
+  "responsive_breakpoints" : [ {
+    "mediaQuery" : "@media (max-width: 1023px)",
+    "messages" : { },
+    "name" : "mobile",
+    "previewWidth" : {
+      "units" : "px",
+      "value" : 520
+    }
+  } ],
+  "author" : {
+    "name" : "",
+    "email" : ""
+  },
+  "hide_all_default_modules" : false
+}
