@@ -1,0 +1,41 @@
+<style>
+  [data-hs-dragdrop] .order-form_show_to_edit {
+    visibility: visible;
+    opacity: 1;
+  }
+</style>
+
+<div class="order-form-product-page
+    {{ "step_{{ module.step }}" if module.step }}
+    {{ "order-form_show_to_edit" if module.is_show_to_edit }}">
+  <h2>
+    {{ module.title }}
+  </h2>
+  <div class="subtitle">
+    {{ module.selected_services_subtitle }}
+  </div>
+  <div class="order-form-selected-services"></div>
+  <div class="subtitle">
+    {{ module.selected_payments_subtitle }}
+  </div>
+  <div class="order-form-selected-payments"></div>
+  <div class="form-outer">
+    {% form
+      form_to_use="{{ module.form.form_id }}"
+      response_response_type="{{ module.form.response_type }}"
+      response_message="{{ module.form.message }}"
+      response_redirect_id="{{ module.form.redirect_id }}"
+      response_redirect_url="{{module.form.redirect_url}}"
+      gotowebinar_webinar_key="{{ module.form.gotowebinar_webinar_key }}"
+    %}
+  </div>
+  <div class="change-step"
+      {% if module.step  > 1 %} data-dir="prev" data-curr-step="{{ module.step }}" {% endif %}>
+    Wróć
+  </div>
+  <div class="order-form-buttons">
+    <div class="button--primary button button change-step">
+      {{ module.button_text }}
+    </div>
+  </div>
+</div>

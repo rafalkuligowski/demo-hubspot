@@ -1,0 +1,143 @@
+[ {
+  "id" : "5b65df8e-9d21-2705-4170-803e8c177144",
+  "name" : "button_text",
+  "display_width" : null,
+  "label" : "Button text",
+  "required" : false,
+  "locked" : false,
+  "validation_regex" : "",
+  "allow_new_line" : false,
+  "show_emoji_picker" : false,
+  "type" : "text",
+  "default" : "Zamów usługi i zacznij korzystać z płatności internetowych"
+}, {
+  "id" : "b56e76d4-0275-59e1-9eff-b30ff051d165",
+  "name" : "services",
+  "display_width" : null,
+  "label" : "Services",
+  "required" : false,
+  "locked" : false,
+  "occurrence" : {
+    "min" : null,
+    "max" : 4,
+    "sorting_label_field" : null,
+    "default" : null
+  },
+  "children" : [ {
+    "id" : "2ffd918c-dc30-84eb-013a-8414fe199c05",
+    "name" : "service_name",
+    "display_width" : null,
+    "label" : "Text",
+    "required" : false,
+    "locked" : false,
+    "validation_regex" : "",
+    "allow_new_line" : false,
+    "show_emoji_picker" : false,
+    "type" : "text",
+    "default" : ""
+  }, {
+    "id" : "08ca82d3-e991-3e84-2d84-666aa7c1cc09",
+    "name" : "service_image",
+    "display_width" : null,
+    "label" : "Image",
+    "required" : false,
+    "locked" : false,
+    "responsive" : true,
+    "resizable" : true,
+    "show_loading" : false,
+    "type" : "image",
+    "default" : {
+      "size_type" : "auto",
+      "src" : "",
+      "alt" : null,
+      "loading" : "lazy"
+    }
+  }, {
+    "id" : "7dc1fc56-925c-0178-adb4-5f05fa90dd29",
+    "name" : "service_description",
+    "display_width" : null,
+    "label" : "Text",
+    "required" : false,
+    "locked" : false,
+    "validation_regex" : "",
+    "allow_new_line" : false,
+    "show_emoji_picker" : false,
+    "type" : "text"
+  }, {
+    "id" : "f1938bf7-233a-ebe6-ad6d-cfa7cdda9d18",
+    "name" : "hubdbrow_field",
+    "display_width" : null,
+    "label" : "Service id",
+    "required" : false,
+    "locked" : false,
+    "table_name_or_id" : "45918138",
+    "columns_to_fetch" : [ "service_id" ],
+    "display_columns" : [ "name", "service_id" ],
+    "display_format" : "%0 (%1)",
+    "type" : "hubdbrow",
+    "default" : {
+      "id" : null
+    }
+  }, {
+    "id" : "0395f47b-64f6-e1d2-98d7-5ddfcb6fd048",
+    "name" : "is_selectable",
+    "display_width" : null,
+    "label" : "Selectable",
+    "required" : false,
+    "locked" : false,
+    "display" : "toggle",
+    "type" : "boolean",
+    "default" : true
+  } ],
+  "tab" : "CONTENT",
+  "expanded" : false,
+  "group_occurrence_meta" : null,
+  "type" : "group",
+  "default" : [ ]
+}, {
+  "id" : "97a66800-4caf-f7a5-b197-3e3af5a91f9f",
+  "name" : "is_gradient_bg",
+  "display_width" : null,
+  "label" : "Gradient bg",
+  "required" : false,
+  "locked" : false,
+  "display" : "toggle",
+  "type" : "boolean",
+  "default" : true
+}, {
+  "id" : "8d0a4d0b-8360-b3fb-407b-77b426afa4b4",
+  "name" : "title",
+  "display_width" : null,
+  "label" : "Title",
+  "required" : false,
+  "locked" : false,
+  "validation_regex" : "",
+  "allow_new_line" : false,
+  "show_emoji_picker" : false,
+  "type" : "text",
+  "default" : "Wybierz usługi"
+}, {
+  "id" : "8435742d-ccc0-6145-c889-93d976513769",
+  "name" : "subtitle",
+  "display_width" : null,
+  "label" : "Subtitle",
+  "required" : false,
+  "locked" : false,
+  "validation_regex" : "",
+  "allow_new_line" : false,
+  "show_emoji_picker" : false,
+  "type" : "text",
+  "default" : "USŁUGI"
+}, {
+  "id" : "6f3af369-4539-77cd-aaae-1595aca2294a",
+  "name" : "has_question_link_text",
+  "display_width" : null,
+  "label" : "Has question",
+  "required" : false,
+  "locked" : false,
+  "validation_regex" : "",
+  "allow_new_line" : false,
+  "show_emoji_picker" : false,
+  "type" : "text",
+  "default" : "Nie wiesz jaką usługę wybrać?"
+} ]

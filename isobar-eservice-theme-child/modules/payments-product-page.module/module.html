@@ -1,0 +1,83 @@
+<style>
+  [data-hs-dragdrop] .payments-product_show_to_edit {
+    visibility: visible;
+    opacity: 1;
+  }
+
+  .modal-bottom-bar .modal-bottom-bar-link {
+      color: red;
+      color: {{theme.global_colors.primary_color.color}};
+      font-weight: 700;
+      text-decoration: underline;
+      cursor: pointer;
+  }
+</style>
+
+<div class="payments-product selectable-box-wrapper-product-page
+  {% if module.step %} step_{{ module.step }} {% endif %}
+  {{ "payments-product_show_to_edit" if module.is_show_to_edit }}"
+>
+  <h2>{{ module.title }}</h2>
+  <div class="selected-payments">
+    <h3>{{ module.selected_services_subtitle }}</h3>
+    <div class="payments-product-selected-services"></div>
+  </div>
+  <h3 class="subtitle">{{ module.select_payments_subtitle }}</h3>
+  <div class="payments-items selectable-box-items-product-page">
+    {% for payment in module.payments  %}
+    	<div class="selectable-box-item
+                 {{ 'selectable-active' if payment.is_selectable  }}
+                 {{ 'with-subpayments' if payment.subpayments }}"
+           data-service-id="{{ payment.hubdbrow_field.columns.service_id }}">
+        	<div class="selectable-box-item-inner main-item item">
+            <div class="selectable-box-item-inner-text">
+              {% if payment.is_selectable %}
+                <input type="checkbox" id="{{ payment.hubdbrow_field.columns.payment_id }}" />
+              {% endif %}
+              <div class="selectable-box-text">
+                <label for="{{ payment.hubdbrow_field.columns.payment_id }}">
+                  <h3>{{ payment.payment_name }}</h3>
+                </label>
+                <div class="selectable-box-product-page__description">{{ payment.payment_description }}</div>
+                {% if payment.url %} <a target="_blank" href="{{ payment.url }}" class="selectable-box-product-page__read_more">Czytaj więcej</a> {% endif %}
+              </div>
+            </div>
+            <img src="{{ payment.payment_image.src }}" alt="{{ payment.payment_image.alt }}" />
+		  </div>
+        {% if payment.subpayments %}
+          <div class="selectable-box-item-subpayments">
+            {% for subpayment in payment.subpayments %}
+              <div class="selectable-box-item-subpayment item">
+                <div class="selectable-box-item-inner">
+                  <div class="selectable-box-item-inner-text">
+                    {% if subpayment.is_selectable_subpayment %}
+                      <input type="checkbox" id="{{ subpayment.hubdbrow_field_subpayment.columns.payment_id }}" disabled/>
+                    {% endif %}
+                    <div class="selectable-box-item-inner-name">
+                      <label for="{{ subpayment.hubdbrow_field_subpayment.columns.payment_id }}">
+                        <h3>{{ subpayment.subpayment_name }}</h3>
+                      </label>
+                      {% if subpayment.url %}<a href="{{ subpayment.subpayment_url }}">Czytaj więcej</a>{% endif %}
+                    </div>
+                  </div>
+                  <img src="{{ subpayment.subpayment_image.src }}" alt="{{ subpayment.subpayment_image.alt }}"/>
+                </div>
+              </div>
+            {% endfor %}
+          </div>
+        {% endif %}
+       </div>
+    {% endfor %}
+  </div>
+  <div class="modal-bottom-bar">
+    <div class="buttons-left">
+      <div class="modal-bottom-bar-link">Wróc</div>
+      <div class="line"></div>
+      <div class="modal-bottom-bar-link">Maszy pytania?</div>
+    </div> 
+    <div class="button--primary button change-step"
+        {% if module.step %} data-dir="next" data-curr-step="{{ module.step }}" {% endif %}>
+      {{ module.button_text }}
+    </div>
+  </div>
+</div>

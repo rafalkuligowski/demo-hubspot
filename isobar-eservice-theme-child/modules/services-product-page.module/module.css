@@ -1,0 +1,16 @@
+.services-product-page .button {
+    display: block;
+    width: fit-content;
+}
+.services-product-page .button.disabled {
+    background-color: #CFD7E2;
+    border: 2px solid #CFD7E2;
+    color: #fff;
+    cursor: default;
+}
+.services-product-page-buttons {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 32px;
+}

@@ -1,4 +1,6 @@
-
+.body-container .dnd-section.row-number-1.hero-product-page {
+    padding-top: 84px !important;
+}
 .hero__text-wrapper h1,
 .hero__text-wrapper p  {
     color: #fff;
@@ -10,9 +12,6 @@
 .hero__text-wrapper p {
     line-height: 1.5;
     font-size: 18px;
-}
-.hero__button {
-    background-color: var(--green-color);
 }
 .hero__image-wrapper {
     display: flex;
@@ -31,10 +30,6 @@
     }
     .hero__text-wrapper {
         max-width: 482px;
-    }
-    .hero__button {
-        background-color: var(--green-color);
-        color: #fff;
     }
     .hero__image-wrapper img {
         max-width: 590px;

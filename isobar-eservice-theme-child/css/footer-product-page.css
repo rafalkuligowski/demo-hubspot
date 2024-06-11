@@ -1,0 +1,18 @@
+.footer-product-page {
+  background-color: #081634;
+  color: #fff;
+}
+.footer-product-page .dnd-column {
+  text-align: center;
+}
+.footer-product-page .footer-links-product-page {
+  list-style: none;
+  display: flex;
+  gap: 24px;
+  justify-content: center;
+}
+.footer-product-page .footer-links-product-page a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: 400;
+}

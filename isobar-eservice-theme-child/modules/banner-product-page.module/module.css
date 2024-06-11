@@ -1,0 +1,29 @@
+.banner-product-page {
+    display: flex;
+    position: relative;
+}
+.banner-text-outer {
+    display: flex;
+    align-items: center;
+    gap: 46px;
+}
+.banner-product-page h3 {
+    color: #fff;
+    font-size: 30px;
+    line-height: 1.2;
+    margin: 0;
+}
+.banner-product-page img {
+    max-width: 369px;   
+    width: 30%;
+    right: 0;
+    bottom: -80px;
+    position: absolute;
+}
+.banner-text-outer {
+    width: 70%;
+    padding-right: 46px;
+}
+.banner-product-page .green__button {
+    flex-shrink: 0;
+}

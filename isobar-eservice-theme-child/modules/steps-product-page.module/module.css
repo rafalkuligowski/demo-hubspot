@@ -1,0 +1,24 @@
+
+@media screen and (min-width: 1023px) {
+    .steps-product-page__items {
+        display: flex;
+        gap: 24px;
+    }
+}
+.steps-product-page__wrapper h3 {
+    font-size: 18px;
+}
+.steps-product-page__item {
+    text-align: center;
+    position: relative;
+}
+.steps-product-page__item:after {
+    display: block;
+    content: "";
+    background-image: url("")
+}
+.steps-product-page__button {
+    margin-top: 40px;
+    display: flex;
+    justify-content: center;
+}

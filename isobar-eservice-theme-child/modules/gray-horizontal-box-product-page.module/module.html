@@ -1,0 +1,30 @@
+{% set rowDb =  module.hubdbrow_field.columns %}
+
+<style>
+  .gray-horizontal-box-product-page__item {
+    background-color: {{ theme.global_colors.element_color.color}};
+    padding: 32px {{ theme.buttons.horizontal_padding }}px;
+  }
+</style>
+
+<div class="gray-horizontal-box-product-page__wrapper" class="{{ module.subtitle|lower|urlencode }}">
+  <div class="product-page-header">
+    <h4>
+      {{ module.subtitle }}
+    </h4>
+    <h2>
+      {{ module.title }}
+    </h2>
+  </div>
+  <div class="gray-horizontal-box-product-page__items">
+    {% for box in module.boxes  %}
+      <div class="gray-horizontal-box-product-page__item">
+        <img src="{{ box.image.src }}" alt="{{ box.image.alt }}" />
+        <div class="gray-horizontal-box-text">
+          <h3>{{ box.title }}</h3>
+          <div class="gray-horizontal-box-product-page__description">{{ box.description }}</div>
+        </div>
+      </div>
+    {% endfor %}
+  </div>
+</div>

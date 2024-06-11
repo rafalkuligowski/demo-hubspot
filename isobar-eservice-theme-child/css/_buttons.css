@@ -1,6 +1,0 @@
-
-.button--primary, input[type="submit"] {
-  color: {{theme.buttons.primary.text_color.color}};
-  background-color: {{theme.buttons.primary.background_color.color}};
-  border: {{theme.buttons.border_width}}px solid {{theme.buttons.primary.border_color.color}};
-}

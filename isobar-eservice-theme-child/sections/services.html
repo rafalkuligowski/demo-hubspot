@@ -1,0 +1,77 @@
+<!--
+    templateType: section
+    isAvailableForNewContent: false
+-->
+<!-- Begin partial -->
+{% dnd_section,
+      vertical_alignment='MIDDLE',
+      class='services-section'
+    %}
+      {% dnd_column
+        width=12
+      %}
+        {% dnd_row
+          margin={
+            'top': 48
+          }
+        %}
+          {% dnd_module "services" path="/isobar-eservice-theme-child/modules/services-product-page",
+          services=[
+            {
+              "service_name": "Bramka płatnicza",
+              "service_image": {
+                "src": "{{ get_asset_url('../../images/arrow_target.png') }}",
+                "alt": "",
+              },
+              'hubdbrow_field': {
+                'id': "99858600122",
+              },
+              'is_selectable': true,
+              'url': "https://www.eservice.pl",
+              'url': "https://www.eservice.pl",
+              "service_description" : "Bramka płatnicza umożliwia dokonanie płatności bezpośrednio na stronie platformy internetowej."
+            }, {
+              "service_name" : "Płatności mobilne/m-commerce",
+              "service_image" : {
+                "size_type" : "auto",
+                "src" : "{{ get_asset_url('../../images/form.png') }}",
+                "alt" : "",
+              },
+              'hubdbrow_field': {
+                'id': "100686060784",
+              },
+              'is_selectable': true,
+              'url': "https://www.eservice.pl", 
+              "service_description" : "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor"
+            }, {
+              "service_name" : "Safelink",
+              "service_image" : {
+                "size_type" : "auto",
+                "src" : "{{ get_asset_url('../../images/sms.png') }}",
+                "alt" : "",
+              },
+              'hubdbrow_field': {
+                'id': "100686060787",
+              },
+              'is_selectable': true,
+              'url': "https://www.eservice.pl", 
+              "service_description" : "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor"
+            }, {
+              "service_name" : "Evo Collect",
+              "service_image" : {
+                "size_type" : "auto",
+                "src" : "{{ get_asset_url('../../images/accept.png') }}",
+                "alt" : "",
+              },
+              'hubdbrow_field': {
+                'id': "103058608875",
+              },
+              'is_selectable': true,
+              'url': "https://www.eservice.pl", 
+              "service_description" : "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor"
+            }] %}
+          {% end_dnd_module %}
+        {% end_dnd_row %}
+      {% end_dnd_column %}
+    {% end_dnd_section %}
+<!-- End partial -->

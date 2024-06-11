@@ -2,7 +2,7 @@
 
 {% macro link(node) %}
 <li>
-    <a href="{{ node.url if node.url else 'javascript:;' }}" class="e-menu__link" >
+    <a href="{{ node.label|unescape_html }}" class="e-menu__link" >
         {{ node.label }}
         {% if node.children %}
         <button type="button" class="e-menu__toggle">

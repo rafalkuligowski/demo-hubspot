@@ -1,0 +1,29 @@
+{% set accordion_data = hubdb_table_rows(module.hubdbtable_field) %}
+<style>
+.accordion-product-page__item {
+    padding: {{ theme.buttons.horizontal_padding }}px;
+}
+</style>
+<div class="accordion-product-page__wrapper">
+  {% for row in accordion_data %}
+    <div class="accordion-product-page__item" >
+      <div class="accordion-product-page__label">
+        <h3>
+          {{row.label}}
+        </h3>
+
+        <!-- svg taken from images/icons/plus-ico.svg -->
+        <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <rect y="7" width="16" height="2" fill="#0140BE"/>
+          <rect x="7" y="16" width="16" height="2" transform="rotate(-90 7 16)" fill="#0140BE"/>
+        </svg>
+
+      </div>
+      <div class="accordion-product-page__content">
+        <div class="accordion-product-page__content-inner">
+          {% rich_text field="test2" value="{{row.content}}" %}
+        </div>
+      </div>
+    </div>
+  {% endfor %}
+</div>

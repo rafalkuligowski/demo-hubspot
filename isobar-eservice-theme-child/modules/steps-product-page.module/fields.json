@@ -1,0 +1,150 @@
+[ {
+  "id" : "42353df0-aaf3-227b-0c87-9ec20b49341a",
+  "name" : "step",
+  "display_width" : null,
+  "label" : "Step",
+  "required" : false,
+  "locked" : false,
+  "occurrence" : {
+    "min" : 3,
+    "max" : null,
+    "sorting_label_field" : "c1375ec6-d65c-9805-caed-9470c9568e7b",
+    "default" : 4
+  },
+  "children" : [ {
+    "id" : "5c5a72a4-d637-4efa-1a7c-22e635cb936f",
+    "name" : "image",
+    "display_width" : null,
+    "label" : "Image",
+    "required" : false,
+    "locked" : false,
+    "responsive" : true,
+    "resizable" : true,
+    "show_loading" : false,
+    "type" : "image",
+    "default" : {
+      "size_type" : "auto",
+      "src" : "",
+      "alt" : null,
+      "loading" : "lazy"
+    }
+  }, {
+    "id" : "c1375ec6-d65c-9805-caed-9470c9568e7b",
+    "name" : "title",
+    "display_width" : null,
+    "label" : "Title",
+    "required" : false,
+    "locked" : false,
+    "validation_regex" : "",
+    "allow_new_line" : false,
+    "show_emoji_picker" : false,
+    "type" : "text"
+  }, {
+    "id" : "bf39428f-3919-6cc9-963b-cf38111dea7d",
+    "name" : "description",
+    "display_width" : null,
+    "label" : "Text",
+    "required" : false,
+    "locked" : false,
+    "validation_regex" : "",
+    "allow_new_line" : false,
+    "show_emoji_picker" : false,
+    "type" : "text"
+  } ],
+  "tab" : "CONTENT",
+  "expanded" : false,
+  "group_occurrence_meta" : null,
+  "type" : "group",
+  "default" : [ ]
+}, {
+  "id" : "908d0652-4f7d-96e9-e580-ba1ddf4a909e",
+  "name" : "image_arrow",
+  "display_width" : null,
+  "label" : "Image",
+  "required" : false,
+  "locked" : false,
+  "responsive" : true,
+  "resizable" : true,
+  "show_loading" : false,
+  "type" : "image",
+  "default" : {
+    "size_type" : "auto",
+    "src" : "https://144435526.fs1.hubspotusercontent-eu1.net/hubfs/144435526/Arrow.svg",
+    "alt" : "Arrow",
+    "loading" : "lazy",
+    "width" : 76,
+    "height" : 24,
+    "max_width" : 76,
+    "max_height" : 24
+  }
+}, {
+  "id" : "49526ab3-90ee-d93a-e8fc-7c22c64626d6",
+  "name" : "button_group",
+  "display_width" : null,
+  "label" : "Button group",
+  "required" : false,
+  "locked" : false,
+  "children" : [ {
+    "id" : "a166f9cd-e2be-0d58-c8bd-04fb58765168",
+    "name" : "button_show",
+    "display_width" : null,
+    "label" : "Button_show",
+    "required" : false,
+    "locked" : false,
+    "display" : "toggle",
+    "type" : "boolean",
+    "default" : true
+  }, {
+    "id" : "0c0595e1-0184-5b7a-ccd2-b64174be1917",
+    "name" : "button_text",
+    "display_width" : null,
+    "label" : "Button text",
+    "required" : false,
+    "locked" : false,
+    "validation_regex" : "",
+    "visibility" : {
+      "controlling_field" : null,
+      "controlling_field_path" : "button_group.button_show",
+      "controlling_value_regex" : "true",
+      "property" : null,
+      "operator" : "EQUAL",
+      "access" : null
+    },
+    "allow_new_line" : false,
+    "show_emoji_picker" : false,
+    "type" : "text",
+    "default" : "Wybierz usługi"
+  } ],
+  "tab" : "CONTENT",
+  "expanded" : false,
+  "group_occurrence_meta" : null,
+  "type" : "group",
+  "default" : {
+    "button_show" : true,
+    "button_text" : "Wybierz usługi"
+  }
+}, {
+  "id" : "378ea0cf-3bd5-3153-9592-5bb151c999d5",
+  "name" : "module_title",
+  "display_width" : null,
+  "label" : "Module title",
+  "required" : false,
+  "locked" : false,
+  "validation_regex" : "",
+  "allow_new_line" : false,
+  "show_emoji_picker" : false,
+  "type" : "text",
+  "default" : "Zacznij korzystać z płatności internetowych w 4 krokach"
+}, {
+  "id" : "6caca4ce-d5cd-8e3c-3c4c-4bfaf0d3cf60",
+  "name" : "module_subtitle",
+  "display_width" : null,
+  "label" : "Module subtitle",
+  "required" : false,
+  "locked" : false,
+  "validation_regex" : "",
+  "allow_new_line" : false,
+  "show_emoji_picker" : false,
+  "type" : "text",
+  "default" : "JAK TO DZIAŁA"
+} ]

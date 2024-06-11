@@ -1,0 +1,41 @@
+
+<style>
+  .steps-product-page__item:after {
+      display: block;
+      content: "";
+      width: 76px;
+      height: 24px;
+      position: absolute;
+      top: 39px;
+      right: -50px;
+      background-image: url("{{ module.image_arrow.src }}");
+  }
+  .steps-product-page__item:last-child:after {
+      display: none;
+  }
+</style>
+
+<div class="steps-product-page__wrapper" id="steps-product-page">
+  <div class="product-page-header">
+    <h4>
+      {{ module.module_subtitle }}
+    </h4>
+    <h2>
+      {{ module.module_title }}
+    </h2>
+  </div>
+  <div class="steps-product-page__items">
+    {% for step in module.step  %}
+      <div class="steps-product-page__item">
+        <img src="{{ step.image.src }}" alt="{{ step.image.alt }}" />
+        <h3>{{ step.title }}</h3>
+        <div class="steps-product-page__description">{{ step.description }}</div>
+      </div>
+    {% endfor %}
+  </div>
+</div>
+{% if module.button_group.button_show %}
+  <div class="steps-product-page__button">
+      <a class="button--primary">{{ module.button_group.button_text }}</a>
+  </div>
+{% endif %}

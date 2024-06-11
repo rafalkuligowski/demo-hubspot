@@ -1,0 +1,93 @@
+[ {
+  "id" : "9cd76905-c5a0-80bb-595c-cc4d596645d6",
+  "name" : "title",
+  "display_width" : null,
+  "label" : "Text",
+  "required" : false,
+  "locked" : false,
+  "validation_regex" : "",
+  "allow_new_line" : false,
+  "show_emoji_picker" : false,
+  "type" : "text",
+  "default" : "Zamów usługi"
+}, {
+  "id" : "0d11ef04-b80e-c5b9-2aaa-c8eaa330c1ea",
+  "name" : "subtitle",
+  "display_width" : null,
+  "label" : "Text",
+  "required" : false,
+  "locked" : false,
+  "validation_regex" : "",
+  "allow_new_line" : false,
+  "show_emoji_picker" : false,
+  "type" : "text",
+  "default" : "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor Lorem ipsum dolor sit amet"
+}, {
+  "id" : "ef373686-46c0-3b06-261a-367a49516bd9",
+  "name" : "form",
+  "display_width" : null,
+  "label" : "Form",
+  "required" : false,
+  "locked" : false,
+  "type" : "form",
+  "default" : {
+    "response_type" : "inline",
+    "message" : "Thanks for submitting the form."
+  }
+}, {
+  "id" : "fb0f698c-3708-deb4-068e-6105b58f725b",
+  "name" : "step",
+  "display_width" : null,
+  "label" : "Step",
+  "required" : false,
+  "locked" : false,
+  "display" : "text",
+  "min" : 1,
+  "step" : 1,
+  "prefix" : "step_",
+  "type" : "number"
+}, {
+  "id" : "ae50dcb6-1b29-7894-d5c2-17f66e397b83",
+  "name" : "button_text",
+  "display_width" : null,
+  "label" : "Button text",
+  "required" : false,
+  "locked" : false,
+  "validation_regex" : "",
+  "allow_new_line" : false,
+  "show_emoji_picker" : false,
+  "type" : "text",
+  "default" : "Przejdź do formularza płatności"
+}, {
+  "id" : "67a3d9ef-6560-d00e-4eb9-554443380a08",
+  "name" : "is_show_to_edit",
+  "display_width" : null,
+  "label" : "Show to edit",
+  "required" : false,
+  "locked" : false,
+  "display" : "toggle",
+  "type" : "boolean",
+  "default" : false
+}, {
+  "id" : "b0d9be48-d0fb-24ab-53ab-1b134c4114ea",
+  "name" : "selected_services_subtitle",
+  "display_width" : null,
+  "label" : "Selected services",
+  "required" : false,
+  "locked" : false,
+  "validation_regex" : "",
+  "allow_new_line" : false,
+  "show_emoji_picker" : false,
+  "type" : "text"
+}, {
+  "id" : "e2864530-c30f-d050-9044-718604f6d5c0",
+  "name" : "selected_payments_subtitle",
+  "display_width" : null,
+  "label" : "Selected payments",
+  "required" : false,
+  "locked" : false,
+  "validation_regex" : "",
+  "allow_new_line" : false,
+  "show_emoji_picker" : false,
+  "type" : "text"
+} ]

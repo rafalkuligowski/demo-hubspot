@@ -1,0 +1,33 @@
+.contact-form-product-page label {
+    width: fit-content;
+    position: absolute;
+    top: -9px;
+    left: 10px;
+    background-color: white;
+    line-height: 1;
+    padding: 2px 4px;
+    z-index: 2;
+}
+.contact-form-product-page .hs-error-msg,
+.contact-form-product-page .hs-error-msgs * {
+    position: static;
+}
+.contact-form-product-page label span{
+    font-size: 13px !important;
+}
+.contact-form-product-page .field {
+    position: relative;
+}
+.contact-form-product-page .legal-consent-container,
+.contact-form-product-page .legal-consent-container * {
+    font-size: 14px;
+    line-height: 1.4;
+}
+.contact-form-product-page input[type="text"],
+.contact-form-product-page input[type="email"],
+.contact-form-product-page input[type="tel"] {
+    border: 1px solid rgba(172, 184, 202, 1)
+}
+.contact-form-product-page input[type="submit"] {
+    width: 100%;
+}

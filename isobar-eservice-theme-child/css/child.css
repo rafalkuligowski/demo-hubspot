@@ -2,12 +2,22 @@
 
 /***********************************************/
 /* CSS @imports must be at the top of the file */
+
+{% set dnd_section_padding = theme.spacing.vertical_spacing ~ 'px ' ~ '20px' %}
+
+{% include './elements/_modal.css' %}
+
 :root {
-  --green-color: #00de66;
+  --color-green: #00de66;
   --column-width-multiplier: 8.333;
+  --color-primary: {{theme.global_colors.primary_color.color}};
 }
 h1 {
   font-size: 46px
+}
+.product-page .dnd-section,
+.product-page .content-wrapper--vertical-spacing {
+  padding: {{ dnd_section_padding }};
 }
 /* Add them above this section                 */
 /***********************************************/

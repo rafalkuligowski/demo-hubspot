@@ -1,0 +1,167 @@
+[ {
+  "id" : "a1b8aeba-7714-6147-8314-e5cdb9adc0ee",
+  "name" : "boxes",
+  "display_width" : null,
+  "label" : "Boxes",
+  "required" : false,
+  "locked" : false,
+  "occurrence" : {
+    "min" : null,
+    "max" : null,
+    "sorting_label_field" : null,
+    "default" : 6
+  },
+  "children" : [ {
+    "id" : "c8e6b6f5-88b1-cf93-0b36-7fd1e02dbdd9",
+    "name" : "image",
+    "display_width" : null,
+    "label" : "Image",
+    "required" : false,
+    "locked" : false,
+    "responsive" : true,
+    "resizable" : true,
+    "show_loading" : false,
+    "type" : "image",
+    "default" : {
+      "size_type" : "auto",
+      "src" : "https://144435526.fs1.hubspotusercontent-eu1.net/hubfs/144435526/Icon%20(4).svg",
+      "alt" : "Icon (4)",
+      "loading" : "lazy",
+      "width" : 97,
+      "height" : 96,
+      "max_width" : 97,
+      "max_height" : 96
+    }
+  }, {
+    "id" : "9647e259-9f7d-2f70-726e-e4c18f6fb35d",
+    "name" : "title",
+    "display_width" : null,
+    "label" : "Title",
+    "required" : false,
+    "locked" : false,
+    "validation_regex" : "",
+    "allow_new_line" : false,
+    "show_emoji_picker" : false,
+    "type" : "text",
+    "default" : "Błyskawiczne transakcje"
+  }, {
+    "id" : "cb317706-f0a0-81f2-33d4-ba050d5ea0e0",
+    "name" : "description",
+    "display_width" : null,
+    "label" : "Description",
+    "required" : false,
+    "locked" : false,
+    "validation_regex" : "",
+    "allow_new_line" : false,
+    "show_emoji_picker" : false,
+    "type" : "text",
+    "default" : "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor"
+  } ],
+  "tab" : "CONTENT",
+  "expanded" : false,
+  "group_occurrence_meta" : null,
+  "type" : "group",
+  "default" : [ {
+    "image" : {
+      "size_type" : "auto",
+      "src" : "{{ get_asset_url('../../images/Icon(1).png') }}",
+      "alt" : "Icon (4)",
+      "loading" : "lazy",
+      "width" : 97,
+      "height" : 96,
+      "max_width" : 97,
+      "max_height" : 96
+    },
+    "title" : "Błyskawiczne transakcje",
+    "description" : "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor"
+  }, {
+    "image" : {
+      "size_type" : "auto",
+      "src" : "{{ get_asset_url('../../images/Icon(2).png') }}",
+      "alt" : "Icon (4)",
+      "loading" : "lazy",
+      "width" : 97,
+      "height" : 96,
+      "max_width" : 97,
+      "max_height" : 96
+    },
+    "title" : "Bezpieczeństwo",
+    "description" : "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor"
+  }, {
+    "image" : {
+      "size_type" : "auto",
+      "src" : "{{ get_asset_url('../../images/Icon(3).png') }}",
+      "alt" : "Icon (4)",
+      "loading" : "lazy",
+      "width" : 97,
+      "height" : 96,
+      "max_width" : 97,
+      "max_height" : 96
+    },
+    "title" : "Wiele metod płatności",
+    "description" : "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor"
+  }, {
+    "image" : {
+      "size_type" : "auto",
+      "src" : "{{ get_asset_url('../../images/Icon(4).png') }}",
+      "alt" : "Icon (4)",
+      "loading" : "lazy",
+      "width" : 97,
+      "height" : 96,
+      "max_width" : 97,
+      "max_height" : 96
+    },
+    "title" : "Większe zyski",
+    "description" : "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor"
+  }, {
+    "image" : {
+      "size_type" : "auto",
+      "src" : "{{ get_asset_url('../../images/Icon(5).png') }}",
+      "alt" : "Icon (4)",
+      "loading" : "lazy",
+      "width" : 97,
+      "height" : 96,
+      "max_width" : 97,
+      "max_height" : 96
+    },
+    "title" : "Łatwa obsługa",
+    "description" : "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor"
+  }, {
+    "image" : {
+      "size_type" : "auto",
+      "src" : "{{ get_asset_url('../../images/Icon(5).png') }}",
+      "alt" : "Icon (4)",
+      "loading" : "lazy",
+      "width" : 97,
+      "height" : 96,
+      "max_width" : 97,
+      "max_height" : 96
+    },
+    "title" : "Łatwa obsługa",
+    "description" : "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor"
+  } ]
+}, {
+  "id" : "8422cca4-ceb0-e162-d71c-e8042619534a",
+  "name" : "subtitle",
+  "display_width" : null,
+  "label" : "Subtitle",
+  "required" : true,
+  "locked" : false,
+  "validation_regex" : "",
+  "allow_new_line" : false,
+  "show_emoji_picker" : false,
+  "type" : "text",
+  "default" : "KORZYŚCI"
+}, {
+  "id" : "d131e649-0a7a-b9eb-8a57-80d6f4f5067a",
+  "name" : "title",
+  "display_width" : null,
+  "label" : "Title",
+  "required" : false,
+  "locked" : false,
+  "validation_regex" : "",
+  "allow_new_line" : false,
+  "show_emoji_picker" : false,
+  "type" : "text",
+  "default" : "Korzyści, które na Ciebie czekają"
+} ]

@@ -1,0 +1,56 @@
+<!--
+  templateType: global_partial
+  label: Footer
+-->
+<footer class="footer-product-page">
+  <div class="footer__container">
+
+    {# Copyright information section #}
+    <div class="footer__copyright">
+
+    <div class="content-wrapper">
+        <div class="row-fluid">
+            <div class="span5 dnd-column">
+                <div class="footer__copyright__text">
+                    {% module_block module 'footer_copyright_text' path='@hubspot/text' %}
+                        {% module_attribute 'value' %}© {{ year }} eService Sp. z o.o. Wszelkie prawa zastrzeżone{% end_module_attribute %}
+                    {% end_module_block %}
+                </div>
+            </div>
+            <div class="span7 dnd-column">
+
+            <div class="footer-links">
+                {% module "module_17163727331167" path="/isobar-eservice-theme-child/modules/footer-links-product-page",label="footer-links-product-page",
+                    links=[
+                        {
+                            "link": {
+                                "url": {
+                                    "content_id": null,
+                                    "type": "EXTERNAL",
+                                    "href": "http://144435526.hs-sites-eu1.com/regulamin"
+                                },
+                                "open_in_new_tab": true,
+                                "no_follow": false,
+                            },
+                            "link_text": "Regulamin"
+                        }, {
+                            "link": {
+                                "url": {
+                                    "content_id": null,
+                                    "type": "EXTERNAL",
+                                    "href": "http://144435526.hs-sites-eu1.com/regulamin"
+                                },
+                                "open_in_new_tab": true,
+                                "no_follow": false,
+                            },
+                            "link_text": "Polityka prywatności"
+                        }
+                    ]
+                %}
+            </div>
+        </div>
+    </div>
+    {# End copyright information section #}
+
+  </div>
+</footer>

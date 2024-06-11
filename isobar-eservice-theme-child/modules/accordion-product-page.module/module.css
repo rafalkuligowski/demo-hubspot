@@ -1,0 +1,36 @@
+.accordion-product-page__item {
+    background-color: #fff;
+    box-shadow: 0 4px 6px rgba(1, 64, 190, .1);
+    border: none;
+    width: 100%;
+    border-radius: 4px;
+    margin-top: 8px
+}
+
+.accordion-product-page__item:first-of-type {
+    margin-top: 0;
+}
+
+.accordion-product-page__content {
+    max-height: 0px;
+    overflow: hidden;
+    transition: max-height .2s ease-in-out;
+}
+.accordion-product-page__content-inner {
+    margin-top: 24px;
+}
+.accordion-product-page__label {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+}
+.accordion-product-page__label h3 {
+    margin-bottom: 0;
+}
+.accordion-product-page__item svg {
+    transition: all .2s ease-in-out;
+}
+.accordion-product-page__item.opened svg {
+    transform: rotate(45deg);
+}

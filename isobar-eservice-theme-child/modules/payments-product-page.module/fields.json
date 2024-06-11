@@ -1,0 +1,255 @@
+[ {
+  "id" : "9ea0ada1-3a37-5240-b60c-1a2c08d8e97a",
+  "name" : "title",
+  "display_width" : null,
+  "label" : "Title",
+  "required" : false,
+  "locked" : false,
+  "validation_regex" : "",
+  "allow_new_line" : false,
+  "show_emoji_picker" : false,
+  "type" : "text",
+  "default" : "Wybierz w jaki sposób chcesz otrzymywać płatności"
+}, {
+  "id" : "6dd008ca-5268-064a-9cd8-20b933fc913a",
+  "name" : "select_payments_subtitle",
+  "display_width" : null,
+  "label" : "Select payments",
+  "required" : false,
+  "locked" : false,
+  "validation_regex" : "",
+  "allow_new_line" : false,
+  "show_emoji_picker" : false,
+  "type" : "text",
+  "default" : "Wybór obsługiwanych płatności:"
+}, {
+  "id" : "84249393-aa4b-9f4c-4c9d-7fe5cd1263ce",
+  "name" : "button_text",
+  "display_width" : null,
+  "label" : "Text",
+  "required" : false,
+  "locked" : false,
+  "validation_regex" : "",
+  "allow_new_line" : false,
+  "show_emoji_picker" : false,
+  "type" : "text",
+  "default" : "Zamów usługę"
+}, {
+  "id" : "32d2b682-f23c-8321-72c3-ca1711085421",
+  "name" : "step",
+  "display_width" : null,
+  "label" : "Step",
+  "required" : false,
+  "locked" : false,
+  "display" : "text",
+  "min" : 1,
+  "step" : 1,
+  "prefix" : "step_",
+  "type" : "number"
+}, {
+  "id" : "f7ac4117-ac23-06bb-6854-f080607a6596",
+  "name" : "payments",
+  "display_width" : null,
+  "label" : "Payments",
+  "required" : false,
+  "locked" : false,
+  "occurrence" : {
+    "min" : null,
+    "max" : null,
+    "sorting_label_field" : null,
+    "default" : null
+  },
+  "children" : [ {
+    "id" : "5d8c3f06-beeb-e986-a35c-5bc73a947d99",
+    "name" : "payment_name",
+    "display_width" : null,
+    "label" : "Payment name",
+    "required" : false,
+    "locked" : false,
+    "validation_regex" : "",
+    "allow_new_line" : false,
+    "show_emoji_picker" : false,
+    "type" : "text"
+  }, {
+    "id" : "4a5f3e70-c659-2662-159c-41fe197900a8",
+    "name" : "is_selectable",
+    "display_width" : null,
+    "label" : "Selectable",
+    "required" : false,
+    "locked" : false,
+    "display" : "checkbox",
+    "type" : "boolean",
+    "default" : true
+  }, {
+    "id" : "9a90115b-b793-9201-0ca6-03b1901d75f2",
+    "name" : "payment_description",
+    "display_width" : null,
+    "label" : "Payment description",
+    "required" : false,
+    "locked" : false,
+    "validation_regex" : "",
+    "allow_new_line" : false,
+    "show_emoji_picker" : false,
+    "type" : "text"
+  }, {
+    "id" : "84b490f0-64fc-d9a3-801c-257583d019c6",
+    "name" : "url",
+    "display_width" : null,
+    "label" : "URL",
+    "required" : false,
+    "locked" : false,
+    "supported_types" : [ "EXTERNAL", "CONTENT", "FILE", "EMAIL_ADDRESS", "BLOG", "CALL_TO_ACTION", "PHONE_NUMBER" ],
+    "type" : "url",
+    "default" : {
+      "content_id" : null,
+      "href" : "",
+      "type" : "EXTERNAL"
+    }
+  }, {
+    "id" : "e45b97c2-4e2b-0dc3-2072-0ac622d0a0c9",
+    "name" : "payment_image",
+    "display_width" : null,
+    "label" : "Payment image",
+    "required" : false,
+    "locked" : false,
+    "responsive" : true,
+    "resizable" : true,
+    "show_loading" : false,
+    "type" : "image",
+    "default" : {
+      "size_type" : "auto",
+      "src" : "",
+      "alt" : null,
+      "loading" : "lazy"
+    }
+  }, {
+    "id" : "e5d5a4fe-5e1c-eeb5-e804-ba3b9d39cd03",
+    "name" : "hubdbrow_field",
+    "display_width" : null,
+    "label" : "HubDB row",
+    "required" : false,
+    "locked" : false,
+    "table_name_or_id" : "52716532",
+    "columns_to_fetch" : [ "payment_id" ],
+    "display_columns" : [ "name", "payment_id" ],
+    "display_format" : "%0 (%1)",
+    "type" : "hubdbrow",
+    "default" : {
+      "id" : null
+    }
+  }, {
+    "id" : "b831d288-4777-b2ca-792b-7214217ac6fe",
+    "name" : "subpayments",
+    "display_width" : null,
+    "label" : "Subpayment group",
+    "required" : false,
+    "locked" : false,
+    "occurrence" : {
+      "min" : null,
+      "max" : 2,
+      "sorting_label_field" : null,
+      "default" : null
+    },
+    "children" : [ {
+      "id" : "79c66d70-c3dd-eb31-d852-9ee4fcd0c650",
+      "name" : "subpayment_name",
+      "display_width" : null,
+      "label" : "Subpayment",
+      "required" : false,
+      "locked" : false,
+      "validation_regex" : "",
+      "allow_new_line" : false,
+      "show_emoji_picker" : false,
+      "type" : "text",
+      "default" : ""
+    }, {
+      "id" : "822b46a0-0f94-2ac8-c5e2-31ab2a68aaa7",
+      "name" : "subpayment_image",
+      "display_width" : null,
+      "label" : "Subpayment image",
+      "required" : false,
+      "locked" : false,
+      "responsive" : true,
+      "resizable" : true,
+      "show_loading" : false,
+      "type" : "image",
+      "default" : {
+        "size_type" : "auto",
+        "src" : "",
+        "alt" : null,
+        "loading" : "lazy"
+      }
+    }, {
+      "id" : "a69dffb3-4dcc-d81b-e8bb-ac31ebdeb17e",
+      "name" : "subpayment_url",
+      "display_width" : null,
+      "label" : "Subpayment URL",
+      "required" : false,
+      "locked" : false,
+      "supported_types" : [ "EXTERNAL", "CONTENT", "FILE", "EMAIL_ADDRESS", "BLOG", "CALL_TO_ACTION", "PHONE_NUMBER" ],
+      "type" : "url",
+      "default" : {
+        "content_id" : null,
+        "href" : "",
+        "type" : "EXTERNAL"
+      }
+    }, {
+      "id" : "6158cccd-2df2-a6e3-0371-6d9078b037ce",
+      "name" : "is_selectable_subpayment",
+      "display_width" : null,
+      "label" : "Selectable",
+      "required" : false,
+      "locked" : false,
+      "display" : "toggle",
+      "type" : "boolean",
+      "default" : true
+    }, {
+      "id" : "218d873f-274b-a15c-ed8e-abc6bff75e90",
+      "name" : "hubdbrow_field_subpayment",
+      "display_width" : null,
+      "label" : "HubDB row",
+      "required" : false,
+      "locked" : false,
+      "table_name_or_id" : "52716532",
+      "columns_to_fetch" : [ "payment_id" ],
+      "display_columns" : [ "name", "payment_id" ],
+      "display_format" : "%0 (%1)",
+      "type" : "hubdbrow",
+      "default" : {
+        "id" : null
+      }
+    } ],
+    "tab" : "CONTENT",
+    "expanded" : false,
+    "group_occurrence_meta" : null,
+    "type" : "group",
+    "default" : [ ]
+  } ],
+  "tab" : "CONTENT",
+  "expanded" : false,
+  "group_occurrence_meta" : null,
+  "type" : "group",
+  "default" : [ ]
+}, {
+  "id" : "03988ae9-792a-549f-d69f-005803538324",
+  "name" : "is_show_to_edit",
+  "display_width" : null,
+  "label" : "Show to edit",
+  "required" : false,
+  "locked" : false,
+  "display" : "toggle",
+  "type" : "boolean",
+  "default" : false
+}, {
+  "id" : "8b8fb433-d48e-2371-94ee-006f6a714ff8",
+  "name" : "selected_services_subtitle",
+  "display_width" : null,
+  "label" : "Selected services_subtitle",
+  "required" : false,
+  "locked" : false,
+  "validation_regex" : "",
+  "allow_new_line" : false,
+  "show_emoji_picker" : false,
+  "type" : "text",
+  "default" : "Wybrane usługi:"
+} ]

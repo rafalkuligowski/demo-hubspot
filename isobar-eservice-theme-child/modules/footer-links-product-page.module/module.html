@@ -1,0 +1,20 @@
+<ul class="footer-links-product-page">
+    {% for item in module.links %}
+    <li>
+        {% set href = item.link.url.href %}
+        {% set rel = [] %}
+        {% if item.link.no_follow %}
+            {% do rel.append("nofollow") %}
+        {% endif %}
+        {% if item.link.open_in_new_tab %}
+            {% do rel.append("noopener") %}
+        {% endif %}
+        <a href="{{ href }}"
+            {% if item.link.open_in_new_tab %}target="_blank"{% endif %}
+            {% if rel %}rel="{{ rel|join(" ") }}"{% endif %}
+            >
+            {% inline_text field="link_text" value="{{ item.link_text }}" %}
+        </a>
+    </li>
+    {% endfor %}
+</ul>

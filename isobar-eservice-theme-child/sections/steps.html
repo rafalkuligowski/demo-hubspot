@@ -1,0 +1,57 @@
+<!--
+    templateType: section
+    isAvailableForNewContent: false
+-->
+<!-- Begin partial -->
+        {% dnd_section,
+      vertical_alignment='MIDDLE',
+      background_color='rgba(247, 248, 252, 1)'
+    %}
+      {% dnd_column
+        width=12
+      %}
+        {% dnd_row
+          margin={
+            'top': 48
+          }
+        %}
+          {% dnd_module "steps-product-page" path="/isobar-eservice-theme-child/modules/steps-product-page",
+          step=[
+            {
+              "title": "Wybierz usługi",
+              "image": {
+                "src": "{{ get_asset_url('../../images/arrow_target.png') }}",
+                "alt": "",
+              },
+              "description" : "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor"
+            }, {
+              "title" : "Wypełnij formularz",
+              "image" : {
+                "size_type" : "auto",
+                "src" : "{{ get_asset_url('../../images/form.png') }}",
+                "alt" : "",
+              },
+              "description" : "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor"
+            }, {
+              "title" : "Podpisz umowę za pomocą SMS",
+              "image" : {
+                "size_type" : "auto",
+                "src" : "{{ get_asset_url('../../images/sms.png') }}",
+                "alt" : "",
+              },
+              "description" : "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor"
+            }, {
+              "title" : "Aktywacja usługi",
+              "image" : {
+                "size_type" : "auto",
+                "src" : "{{ get_asset_url('../../images/accept.png') }}",
+                "alt" : "",
+              },
+              "description" : "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor"
+            }]
+           %}
+          {% end_dnd_module %}
+        {% end_dnd_row %}
+      {% end_dnd_column %}
+    {% end_dnd_section %}
+<!-- End partial -->
