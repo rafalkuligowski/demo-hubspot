@@ -2,15 +2,23 @@
     display: block;
     width: fit-content;
 }
-.services-product-page .button.disabled {
-    background-color: #CFD7E2;
-    border: 2px solid #CFD7E2;
-    color: #fff;
-    cursor: default;
-}
 .services-product-page-buttons {
     display: flex;
     align-items: center;
     justify-content: space-between;
     margin-top: 32px;
+}
+.selectable-box-items-product-page.vertical-boxes {
+    grid-template-columns: repeat(3, 1fr);
+}
+.selectable-box-items-product-page.vertical-boxes .selectable-box-item-inner {
+    flex-direction: column-reverse;
+}
+.selectable-box-items-product-page .selectable-box-links {
+    display: flex;
+    gap: 32px;
+    margin: 24px 0;
+}
+.selectable-box-items-product-page .selectable-box-links .selectable-box-product-page__read_more {
+    margin-top: 0;
 }

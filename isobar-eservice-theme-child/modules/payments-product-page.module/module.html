@@ -26,7 +26,7 @@
   <div class="payments-items selectable-box-items-product-page">
     {% for payment in module.payments  %}
     	<div class="selectable-box-item
-                 {{ 'selectable-active' if payment.is_selectable  }}
+                 {{ 'selectable-active' if payment.is_selectable else "active"  }}
                  {{ 'with-subpayments' if payment.subpayments }}"
            data-service-id="{{ payment.hubdbrow_field.columns.service_id }}">
         	<div class="selectable-box-item-inner main-item item">
@@ -75,7 +75,7 @@
       <div class="line"></div>
       <div class="modal-bottom-bar-link">Maszy pytania?</div>
     </div> 
-    <div class="button--primary button change-step"
+    <div class="button--primary button change-step disabled"
         {% if module.step %} data-dir="next" data-curr-step="{{ module.step }}" {% endif %}>
       {{ module.button_text }}
     </div>

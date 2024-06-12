@@ -1,13 +1,15 @@
-
 <style>
   .selectable-box-wrapper-product-page .selectable-box-item:not(.active):hover {
       border-color: {{theme.global_colors.primary_color.color}};
   }
-  .selectable-box-wrapper-product-page .selectable-box-item.active {
+  .selectable-box-wrapper-product-page .selectable-box-item.default-active:hover {
+      border-color: transparent;
+  }
+  .selectable-box-wrapper-product-page .selectable-box-item.active,
+  .selectable-box-wrapper-product-page .selectable-box-item.default-active {
       border-color: transparent;
       outline: 2px solid {{theme.global_colors.primary_color.color}};
       box-shadow: 0 10px 10px 0 rgb(1 64 190 / 5%);
-
   }
   .services-product-page-buttons .link {
       color: {{theme.global_colors.primary_color.color}};
@@ -15,43 +17,73 @@
       font-weight: bold;
       cursor: pointer;
   }
+  .selectable-box-items-product-page {
+      display: inline-grid;
+      gap: 24px;
+      grid-template-columns: repeat(4, 1fr);
+  }
+  .selectable-box-items-product-page.flex-boxes {
+    display: flex;
+  }
 </style>
 
-<div class="selectable-box-wrapper-product-page {% if module.is_gradient_bg %} gradient_bg {% endif %} services-product-page"
+<div class="selectable-box-wrapper-product-page {% if module.is_gradient_bg %} gradient_bg {% endif %} services-product-page
+           {{ 'one-box' if module.services|length == 1 }}"
      id="{{ module.subtitle|lower|urlencode }}">
-  <div class="product-page-header">
-    <h4>{{ module.subtitle }}</h4>
-    <h2>{{ module.title }}</h2>
-  </div>
-  <div class="selectable-box-items-product-page">
+  {% if module.services|length > 1 %}
+    <div class="product-page-header">
+      <h4>{{ module.subtitle }}</h4>
+      <h2>{{ module.title }}</h2>
+    </div>
+  {% endif %}
+<div class="selectable-box-items-product-page {{ 'vertical-boxes' if module.services|length % 3 == 0 }} {{ 'flex-boxes' if module.services|length < 3 }}">
     {% for service in module.services  %}
-      <div class="selectable-box-item {{ "selectable-active" if service.is_selectable  }}" data-service-id="{{ service.hubdbrow_field.columns.service_id }}">
+      <div class="selectable-box-item {{ "selectable-active" if service.is_selectable and module.services|length > 1 else "active" }}" data-service-id="{{ service.hubdbrow_field.columns.service_id }}">
         <div class="selectable-box-item-inner main-item">
           <div class="selectable-box-item-inner-text">
-            {% if service.is_selectable %}
+            {% if service.is_selectable and module.services|length > 1 %}
               <input type="checkbox" id="{{ service.hubdbrow_field.columns.service_id }}" />
             {% endif %}
             <div class="selectable-box-text">
+              {% if module.services|length == 1 %}
+                <h4>{{ module.subtitle }}</h4>
+              {% endif %}
               <label for="{{ service.hubdbrow_field.columns.service_id }}">
                 <h3>{{ service.service_name }}</h3>
               </label>
               <div class="selectable-box-product-page__description">{{ service.service_description }}</div>
-              <a target="_blank" href="{{ service.url }}" class="selectable-box-product-page__read_more">Czytaj więcej</a>
+                {% if module.services|length == 1 %}<div class="selectable-box-links">{% endif %}
+                  <a target="_blank" href="{{ service.url }}" class="selectable-box-product-page__read_more">Czytaj więcej</a>
+                  {% if module.has_question_link_text %}
+                    <div class="link">
+                      {{ module.has_question_link_text }}
+                    </div>
+                  {% endif %}
+                {% if module.services|length == 1 %}
+                  </div>
+                  <div class="button--primary button toggle-modal disabled">
+                    {{ module.button_text }}
+                  </div>
+                {% endif %}
             </div>
           </div>
-          <img src="{{ service.service_image.src }}" alt="{{ service.service_image.alt }}" />
+          <div class="selectable-box-img-outer">
+            <img src="{{ service.service_image.src }}" alt="{{ service.service_image.alt }}" />
+          </div>
         </div>
       </div>
     {% endfor %}
   </div>
-  <div class="services-product-page-buttons">
-    {% if module.has_question_link_text %}
-      <div class="link">
-        {{ module.has_question_link_text }}
+  {% if module.services|length > 1 %}
+    <div class="services-product-page-buttons">
+      {% if module.has_question_link_text %}
+        <div class="link">
+          {{ module.has_question_link_text }}
+        </div>
+      {% endif %}
+      <div class="button--primary button toggle-modal disabled">
+        {{ module.button_text }}
       </div>
-    {% endif %}
-    <div class="button--primary button toggle-modal disabled">
-      {{ module.button_text }}
     </div>
-  </div>
+  {% endif %}
 </div>

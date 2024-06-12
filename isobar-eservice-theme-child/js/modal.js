@@ -5,7 +5,8 @@ const modal = {
         this.openOrderFormModule();
         this.closeModal();
         this.toggleBoxes();
-        // this.collectServiceNames();
+        this.getServices();
+        this.setDisabledButtonModal();
     },
     services: [],
     payments: [],
@@ -36,6 +37,7 @@ const modal = {
         $(".close-modal").remove();
     },
     getServices: function() {
+        console.log("getServices");
         this.services = [];
 
         $(".payments-product-services-item").remove();
@@ -48,6 +50,7 @@ const modal = {
             });
         })
         this.showServices();
+        console.log(this.services);
     },
     getPayments: function() {
         this.payments = [];
@@ -109,6 +112,12 @@ const modal = {
         this.services.forEach(service => {
             if (service.isSelected) {
                 $(".toggle-modal").removeClass("disabled");
+                return;
+            }
+        })
+        this.payments.forEach(payment => {
+            if (payment.isSelected) {
+                $(".change-step").removeClass("disabled");
                 return;
             }
         })

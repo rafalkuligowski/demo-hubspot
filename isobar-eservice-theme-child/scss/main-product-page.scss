@@ -38,4 +38,15 @@ html {
         cursor: pointer;
         text-decoration: none;
     }
+    .button.disabled {
+        background-color: #CFD7E2;
+        border: 2px solid #CFD7E2;
+        color: #fff;
+        cursor: default;
+    }
+    .link {
+        color: var(--color-primary);
+        text-decoration: underline;
+        font-weight: 600;
+    }
 }

@@ -9,7 +9,7 @@
   "allow_new_line" : false,
   "show_emoji_picker" : false,
   "type" : "text",
-  "default" : "Zamów usługi i zacznij korzystać z płatności internetowych"
+  "default" : "Konfiguruj wybrane usługi"
 }, {
   "id" : "b56e76d4-0275-59e1-9eff-b30ff051d165",
   "name" : "services",
